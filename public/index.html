@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <!-- CSS Styles -->
+  <link rel="stylesheet" href="styles/css/index.css">
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>SPLITTER</h1>
+  </header>
+  <main>
+    <div id="bill-values">
+      <div id="bill">
+        <h2 id="bill-title">Bill</h2>
+        <input type="text">
+      </div>
+
+      <div id="tip">
+        <h2 id="tip-title">Select Tip %</h2>
+        <div id="tip-value-list">
+
+          <div id="tip-five" class="tip-select">
+            <label for="value-five">5%</label>
+            <input type="radio" name="tip" id="value-five">
+          </div>
+
+          <div id="tip-ten" class="tip-select">
+            <label for="value-ten">10%</label>
+            <input type="radio" name="tip" id="value-ten">
+          </div>
+
+          <div id="tip-fifteen" class="tip-select">
+            <label for="value-fifteen">15%</label>
+            <input type="radio" name="tip" id="value-fifteen">
+          </div>
+
+          <div id="tip-twenty-five" class="tip-select">
+            <label for="value-twenty-five">25%</label>
+            <input type="radio" name="tip" id="value-twenty-five">
+          </div>
+
+          <div id="tip-fifty" class="tip-select">
+            <label for="value-fifty">50%</label>
+            <input type="radio" name="tip" id="value-fifty">
+          </div>
+
+          <div id="tip-custom" class="tip-custom">
+            <label for="value-custom">Custom</label>
+            <input type="number" name="tip" id="value-custom">
+          </div>
+          
+        </div>
+      </div>
+
+      <div id="number-people">
+        <h2 id="number-people-title">Number of People</h2>
+        <div id="number-people-values">
+          <input type="number" name="people-value" id="number-people-value">
+        </div>
+      </div>
+    </div>
+
+    <div id="bill-result">
+      <div id="tip-amount">
+        <h2 id="tip-amount-title">Tip Amount <span>/ person</span></h2>
+        <p id="tip-amount-result"></p>
+      </div>
+
+      <div id="total-by-person">
+        <h2 id="by-person-title">Total <span>/ person</span></h2>
+        <p id="tip-amount-result"></p>
+      </div>
+
+      <div id="bill-reset">
+        <button id="bill-reset-button">Reset</button>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Nicolas Samuel</a>.
+    </div>
+  </footer>
+</body>
+</html>
