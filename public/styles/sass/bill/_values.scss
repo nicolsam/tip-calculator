@@ -104,30 +104,35 @@
                 input[id="value-five"]:checked + label{
                     background: $strong-cyan;
                     color: $very-dark-cyan;
+                    border-radius: 5px;
                 }
                 
                 input[id="value-ten"]:hover + label, 
                 input[id="value-ten"]:checked + label{
                     background: $strong-cyan;
                     color: $very-dark-cyan;
+                    border-radius: 5px;
                 }
 
                 input[id="value-fifteen"]:hover + label, 
                 input[id="value-fifteen"]:checked + label{
                     background: $strong-cyan;
                     color: $very-dark-cyan;
+                    border-radius: 5px;
                 }
     
                 input[id="value-twenty-five"]:hover + label, 
                 input[id="value-twenty-five"]:checked + label{
                     background: $strong-cyan;
                     color: $very-dark-cyan;
+                    border-radius: 5px;
                 }
 
                 input[id="value-fifty"]:hover + label, 
                 input[id="value-fifty"]:checked + label{
                     background: $strong-cyan;
                     color: $very-dark-cyan;
+                    border-radius: 5px;
                 }
             }
 
