@@ -1,0 +1,39 @@
+@import "values";
+@import "result";
+
+main {
+
+    width: 60%;
+    max-width: 1200px;
+
+    display: flex;
+    flex-direction: row;
+
+    background: $white;
+
+    padding: 40px;
+    border-radius: 20px;
+    
+    ::placeholder {
+        font-family: 'Space Mono', monospace, sans-serif;
+    }
+
+    h2 {
+        color: $dark-grayish-cyan;
+    }
+
+    #bill-values, #bill-result {
+
+        width: 50%;
+
+        &#bill-values {
+            margin-right: 20px;
+        }
+
+        &#bill-result {
+            margin-left: 20px;
+        }
+        
+    }
+
+}
