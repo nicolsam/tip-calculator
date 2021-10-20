@@ -30,7 +30,7 @@
   margin-bottom: 2em;
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
   grid-template-rows: repeat(auto-fit, minmax(40px, 40px));
   gap: 10px;
   max-height: 400px;
@@ -38,7 +38,7 @@
 #bill-values #bill #tip-value-list .tip-custom #value-custom {
   width: 100%;
   max-height: 40px;
-  font-size: 18px;
+  font-size: 24px;
   font-weight: 700;
 }
 #bill-values #bill #tip-value-list .tip-select {
@@ -50,12 +50,45 @@
   cursor: pointer;
 }
 #bill-values #bill #tip-value-list .tip-select label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
   cursor: pointer;
+  font-size: 24px;
+  font-weight: 700;
+  transition: 0.2s;
 }
 #bill-values #bill #tip-value-list .tip-select input[type=radio] {
   position: fixed;
   opacity: 0;
   pointer-events: none;
+}
+#bill-values #bill #tip-value-list .tip-select input[id=value-five]:hover + label,
+#bill-values #bill #tip-value-list .tip-select input[id=value-five]:checked + label {
+  background: #26c0ab;
+  color: #00494d;
+}
+#bill-values #bill #tip-value-list .tip-select input[id=value-ten]:hover + label,
+#bill-values #bill #tip-value-list .tip-select input[id=value-ten]:checked + label {
+  background: #26c0ab;
+  color: #00494d;
+}
+#bill-values #bill #tip-value-list .tip-select input[id=value-fifteen]:hover + label,
+#bill-values #bill #tip-value-list .tip-select input[id=value-fifteen]:checked + label {
+  background: #26c0ab;
+  color: #00494d;
+}
+#bill-values #bill #tip-value-list .tip-select input[id=value-twenty-five]:hover + label,
+#bill-values #bill #tip-value-list .tip-select input[id=value-twenty-five]:checked + label {
+  background: #26c0ab;
+  color: #00494d;
+}
+#bill-values #bill #tip-value-list .tip-select input[id=value-fifty]:hover + label,
+#bill-values #bill #tip-value-list .tip-select input[id=value-fifty]:checked + label {
+  background: #26c0ab;
+  color: #00494d;
 }
 #bill-values #bill #number-people {
   width: 100%;
@@ -82,15 +115,54 @@
 #bill-result {
   background: #00494d;
   color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  border-radius: 20px;
 }
-#bill-result span.gray {
-  display: block;
-  color: #7f9c9f;
-  font-size: 16px;
+#bill-result #bill-result-body, #bill-result #bill-reset {
+  width: 100%;
+  height: 100%;
 }
-#bill-result #tip-amount, #bill-result #total-by-person {
+#bill-result #bill-result-body #tip-amount, #bill-result #bill-result-body #total-by-person {
   display: flex;
   flex-direction: row;
+  align-self: start;
+  align-items: center;
+  justify-content: space-between;
+}
+#bill-result #bill-result-body #tip-amount .result-body-title, #bill-result #bill-result-body #total-by-person .result-body-title {
+  font-size: 1em;
+  color: white;
+}
+#bill-result #bill-result-body #tip-amount .result-body-title span.gray, #bill-result #bill-result-body #total-by-person .result-body-title span.gray {
+  font-size: 0.7em;
+  display: block;
+  color: #7f9c9f;
+}
+#bill-result #bill-result-body #tip-amount .output-container, #bill-result #bill-result-body #total-by-person .output-container {
+  color: #26c0ab;
+  font-size: 3em;
+  font-weight: 700;
+}
+#bill-result #bill-reset {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  width: 100%;
+}
+#bill-result #bill-reset #bill-reset-button {
+  height: 30%;
+  width: 90%;
+  background: #0d686d;
+  border: 0;
+  border-radius: 5px;
+  font-size: 1.5em;
+  font-weight: 700;
+  color: white;
+  cursor: pointer;
 }
 
 main {
@@ -149,7 +221,7 @@ main #bill-values#bill-result, main #bill-result#bill-result {
   margin-bottom: 2em;
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
   grid-template-rows: repeat(auto-fit, minmax(40px, 40px));
   gap: 10px;
   max-height: 400px;
@@ -157,7 +229,7 @@ main #bill-values#bill-result, main #bill-result#bill-result {
 #bill-values #bill #tip-value-list .tip-custom #value-custom {
   width: 100%;
   max-height: 40px;
-  font-size: 18px;
+  font-size: 24px;
   font-weight: 700;
 }
 #bill-values #bill #tip-value-list .tip-select {
@@ -169,12 +241,45 @@ main #bill-values#bill-result, main #bill-result#bill-result {
   cursor: pointer;
 }
 #bill-values #bill #tip-value-list .tip-select label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
   cursor: pointer;
+  font-size: 24px;
+  font-weight: 700;
+  transition: 0.2s;
 }
 #bill-values #bill #tip-value-list .tip-select input[type=radio] {
   position: fixed;
   opacity: 0;
   pointer-events: none;
+}
+#bill-values #bill #tip-value-list .tip-select input[id=value-five]:hover + label,
+#bill-values #bill #tip-value-list .tip-select input[id=value-five]:checked + label {
+  background: #26c0ab;
+  color: #00494d;
+}
+#bill-values #bill #tip-value-list .tip-select input[id=value-ten]:hover + label,
+#bill-values #bill #tip-value-list .tip-select input[id=value-ten]:checked + label {
+  background: #26c0ab;
+  color: #00494d;
+}
+#bill-values #bill #tip-value-list .tip-select input[id=value-fifteen]:hover + label,
+#bill-values #bill #tip-value-list .tip-select input[id=value-fifteen]:checked + label {
+  background: #26c0ab;
+  color: #00494d;
+}
+#bill-values #bill #tip-value-list .tip-select input[id=value-twenty-five]:hover + label,
+#bill-values #bill #tip-value-list .tip-select input[id=value-twenty-five]:checked + label {
+  background: #26c0ab;
+  color: #00494d;
+}
+#bill-values #bill #tip-value-list .tip-select input[id=value-fifty]:hover + label,
+#bill-values #bill #tip-value-list .tip-select input[id=value-fifty]:checked + label {
+  background: #26c0ab;
+  color: #00494d;
 }
 #bill-values #bill #number-people {
   width: 100%;
