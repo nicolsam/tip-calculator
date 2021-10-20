@@ -1,0 +1,250 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+#bill-values input#bill-value, #bill-values input#number-people-value {
+  text-align: right;
+  background: #f4fafa;
+}
+#bill-values #bill {
+  width: 100%;
+}
+#bill-values #bill #bill-cost {
+  margin-bottom: 2em;
+}
+#bill-values #bill #bill-cost #bill-input-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100%;
+  background: #f4fafa;
+}
+#bill-values #bill #bill-cost #bill-input-container #img-dollar {
+  display: flex;
+  justify-content: center;
+  width: 20%;
+  height: 100%;
+}
+#bill-values #bill #bill-cost #bill-input-container #bill-value {
+  width: 80%;
+  height: 100%;
+}
+#bill-values #bill #tip-value-list {
+  margin-bottom: 2em;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(40px, 40px));
+  gap: 10px;
+  max-height: 400px;
+}
+#bill-values #bill #tip-value-list .tip-custom #value-custom {
+  width: 100%;
+  max-height: 40px;
+  font-size: 18px;
+  font-weight: 700;
+}
+#bill-values #bill #tip-value-list .tip-select {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #00494d;
+  color: white;
+  cursor: pointer;
+}
+#bill-values #bill #tip-value-list .tip-select label {
+  cursor: pointer;
+}
+#bill-values #bill #tip-value-list .tip-select input[type=radio] {
+  position: fixed;
+  opacity: 0;
+  pointer-events: none;
+}
+#bill-values #bill #number-people {
+  width: 100%;
+  width: 100%;
+}
+#bill-values #bill #number-people #number-input-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100%;
+  background: #f4fafa;
+}
+#bill-values #bill #number-people #number-input-container #img-person {
+  display: flex;
+  justify-content: center;
+  width: 20%;
+  height: 100%;
+}
+#bill-values #bill #number-people #number-input-container #number-people-value {
+  width: 80%;
+  height: 100%;
+}
+
+#bill-result {
+  background: #00494d;
+  color: white;
+}
+#bill-result span.gray {
+  display: block;
+  color: #7f9c9f;
+  font-size: 16px;
+}
+#bill-result #tip-amount, #bill-result #total-by-person {
+  display: flex;
+  flex-direction: row;
+}
+
+main {
+  width: 60%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: row;
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+}
+main ::placeholder {
+  font-family: "Space Mono", monospace, sans-serif;
+}
+main h2 {
+  color: #7f9c9f;
+}
+main #bill-values, main #bill-result {
+  width: 50%;
+}
+main #bill-values#bill-values, main #bill-result#bill-values {
+  margin-right: 20px;
+}
+main #bill-values#bill-result, main #bill-result#bill-result {
+  margin-left: 20px;
+}
+
+#bill-values input#bill-value, #bill-values input#number-people-value {
+  text-align: right;
+  background: #f4fafa;
+}
+#bill-values #bill {
+  width: 100%;
+}
+#bill-values #bill #bill-cost {
+  margin-bottom: 2em;
+}
+#bill-values #bill #bill-cost #bill-input-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100%;
+  background: #f4fafa;
+}
+#bill-values #bill #bill-cost #bill-input-container #img-dollar {
+  display: flex;
+  justify-content: center;
+  width: 20%;
+  height: 100%;
+}
+#bill-values #bill #bill-cost #bill-input-container #bill-value {
+  width: 80%;
+  height: 100%;
+}
+#bill-values #bill #tip-value-list {
+  margin-bottom: 2em;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(40px, 40px));
+  gap: 10px;
+  max-height: 400px;
+}
+#bill-values #bill #tip-value-list .tip-custom #value-custom {
+  width: 100%;
+  max-height: 40px;
+  font-size: 18px;
+  font-weight: 700;
+}
+#bill-values #bill #tip-value-list .tip-select {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #00494d;
+  color: white;
+  cursor: pointer;
+}
+#bill-values #bill #tip-value-list .tip-select label {
+  cursor: pointer;
+}
+#bill-values #bill #tip-value-list .tip-select input[type=radio] {
+  position: fixed;
+  opacity: 0;
+  pointer-events: none;
+}
+#bill-values #bill #number-people {
+  width: 100%;
+  width: 100%;
+}
+#bill-values #bill #number-people #number-input-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100%;
+  background: #f4fafa;
+}
+#bill-values #bill #number-people #number-input-container #img-person {
+  display: flex;
+  justify-content: center;
+  width: 20%;
+  height: 100%;
+}
+#bill-values #bill #number-people #number-input-container #number-people-value {
+  width: 80%;
+  height: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Space Mono", monospace, sans-serif;
+  background: #c5e4e7;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* Hidden arrows for number inputs */
+  /* Chrome, Safari, Edge, Opera */
+  /* Firefox */
+}
+body input::-webkit-outer-spin-button,
+body input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+body input[type=number] {
+  -moz-appearance: textfield;
+}
+
+header {
+  margin-bottom: 20px;
+  letter-spacing: 10px;
+  color: #00494d;
+}
+
+input {
+  padding: 10px;
+  outline: none;
+  box-shadow: none;
+  border: 0;
+  background: #f4fafa;
+  font-size: 24px;
+}
+
+input:focus:hover:active:active, button:focus:hover:active {
+  outline: none;
+  box-shadow: none;
+  border: 0;
+}
+
+/*# sourceMappingURL=index.css.map */
