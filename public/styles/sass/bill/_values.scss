@@ -44,25 +44,24 @@
 
         }
         
-
         #tip-value-list {
 
             margin-bottom: 2em;
             width: 100%;
 
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
             grid-template-rows: repeat(auto-fit, minmax(40px, 40px));
             gap: 10px;
 
-            max-height: 400px;
+            max-height: 400px;   
 
             .tip-custom {
 
                 #value-custom {
                     width: 100%;
                     max-height: 40px;
-                    font-size: 18px;
+                    font-size: 24px;
                     font-weight: 700;   
                 }
                 
@@ -81,7 +80,18 @@
                 cursor: pointer;
 
                 label {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    width: 100%;
+                    height: 100%;
                     cursor: pointer;
+
+                    font-size: 24px;
+                    font-weight: 700;
+
+                    transition: .2s;
                 }
 
                 input[type=radio] {
@@ -89,7 +99,36 @@
                     opacity: 0;
                     pointer-events: none;
                 }
+
+                input[id="value-five"]:hover + label, 
+                input[id="value-five"]:checked + label{
+                    background: $strong-cyan;
+                    color: $very-dark-cyan;
+                }
+                
+                input[id="value-ten"]:hover + label, 
+                input[id="value-ten"]:checked + label{
+                    background: $strong-cyan;
+                    color: $very-dark-cyan;
+                }
+
+                input[id="value-fifteen"]:hover + label, 
+                input[id="value-fifteen"]:checked + label{
+                    background: $strong-cyan;
+                    color: $very-dark-cyan;
+                }
     
+                input[id="value-twenty-five"]:hover + label, 
+                input[id="value-twenty-five"]:checked + label{
+                    background: $strong-cyan;
+                    color: $very-dark-cyan;
+                }
+
+                input[id="value-fifty"]:hover + label, 
+                input[id="value-fifty"]:checked + label{
+                    background: $strong-cyan;
+                    color: $very-dark-cyan;
+                }
             }
         }
         
