@@ -90,6 +90,9 @@
   background: #26c0ab;
   color: #00494d;
 }
+#bill-values #bill #tip-value-list .item {
+  border-radius: 5px;
+}
 #bill-values #bill #number-people {
   width: 100%;
   width: 100%;
@@ -119,7 +122,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 1em;
+  padding: 2em;
   border-radius: 20px;
 }
 #bill-result #bill-result-body, #bill-result #bill-reset {
@@ -178,7 +181,9 @@ main ::placeholder {
   font-family: "Space Mono", monospace, sans-serif;
 }
 main h2 {
+  font-size: 1em;
   color: #7f9c9f;
+  margin-bottom: 10px;
 }
 main #bill-values, main #bill-result {
   width: 50%;
@@ -280,6 +285,9 @@ main #bill-values#bill-result, main #bill-result#bill-result {
 #bill-values #bill #tip-value-list .tip-select input[id=value-fifty]:checked + label {
   background: #26c0ab;
   color: #00494d;
+}
+#bill-values #bill #tip-value-list .item {
+  border-radius: 5px;
 }
 #bill-values #bill #number-people {
   width: 100%;
