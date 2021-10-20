@@ -16,5 +16,6 @@
 .prettierignore
 
 resources/README-template.md
+resources/README-welcome.md
 
 
