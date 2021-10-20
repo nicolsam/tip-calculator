@@ -19,7 +19,9 @@ main {
     }
 
     h2 {
+        font-size: 1em;
         color: $dark-grayish-cyan;
+        margin-bottom: 10px;
     }
 
     #bill-values, #bill-result {
