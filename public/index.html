@@ -41,28 +41,28 @@
 
           <div id="tip-value-list">
             <div id="tip-five" class="tip-select item">
-              <label for="value-five">5%</label>
               <input type="radio" name="tip" id="value-five" value="5">
+              <label for="value-five">5%</label>
             </div>
 
             <div id="tip-ten" class="tip-select item">
+              <input type="radio" name="tip" id="value-ten" class="value-ten" value="10">
               <label for="value-ten">10%</label>
-              <input type="radio" name="tip" id="value-ten" value="10">
             </div>
 
             <div id="tip-fifteen" class="tip-select item">
-              <label for="value-fifteen">15%</label>
               <input type="radio" name="tip" id="value-fifteen" value="15">
+              <label for="value-fifteen">15%</label>
             </div>
 
             <div id="tip-twenty-five" class="tip-select item">
-              <label for="value-twenty-five">25%</label>
               <input type="radio" name="tip" id="value-twenty-five" value="25">
+              <label for="value-twenty-five">25%</label>
             </div>
 
             <div id="tip-fifty" class="tip-select item">
-              <label for="value-fifty">50%</label>
               <input type="radio" name="tip" id="value-fifty" value="50">
+              <label for="value-fifty">50%</label>
             </div>
 
             <div id="tip-custom" class="tip-custom item">
@@ -86,27 +86,31 @@
     </div>
 
     <div id="bill-result">
-      <div id="tip-amount">
-        <h2 id="tip-amount-title">Tip Amount <span class="gray">/ person</span></h2>
-        
-        <div>
-          <span>$</span>
-          <output id="tip-amount-result">0.00</output>
-        </div>
-      </div>
 
-      <div id="total-by-person">
-        <h2 id="by-person-title">Total <span class="gray">/ person</span></h2>
-        <div>
-          <span>$</span>
-          <output id="by-person-result">0.00</output>
+      <div id="bill-result-body">
+        <div id="tip-amount">
+          <h2 id="tip-amount-title" class="result-body-title">Tip Amount <span class="gray">/ person</span></h2>
+          
+          <div id="tip-amount-result" class="output-container">
+            <span>$</span><output id="tip-amount-output" class="bill-result-output">0.00</output>
+          </div>
         </div>
-        
+  
+        <div id="total-by-person">
+          <h2 id="by-person-title" class="result-body-title">Total <span class="gray">/ person</span></h2>
+
+          <div id="by-person-result" class="output-container">
+            <span>$</span><output id="by-person-output" class="bill-result-output">0.00</output>
+          </div>
+          
+        </div>
+  
       </div>
 
       <div id="bill-reset">
         <button id="bill-reset-button">Reset</button>
       </div>
+      
     </div>
   </main>
   <footer>
