@@ -70,6 +70,11 @@
             color: $white;
 
             cursor: pointer;
+
+            &:hover {
+                background: $strong-cyan;
+                color: $very-dark-cyan;
+            }
         } 
 
     }
