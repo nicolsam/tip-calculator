@@ -2,6 +2,8 @@
 #bill-values input#bill-value, #bill-values input#number-people-value {
   text-align: right;
   background: #f4fafa;
+  color: #00494d;
+  font-weight: 700;
 }
 #bill-values #bill {
   width: 100%;
@@ -69,26 +71,31 @@
 #bill-values #bill #tip-value-list .tip-select input[id=value-five]:checked + label {
   background: #26c0ab;
   color: #00494d;
+  border-radius: 5px;
 }
 #bill-values #bill #tip-value-list .tip-select input[id=value-ten]:hover + label,
 #bill-values #bill #tip-value-list .tip-select input[id=value-ten]:checked + label {
   background: #26c0ab;
   color: #00494d;
+  border-radius: 5px;
 }
 #bill-values #bill #tip-value-list .tip-select input[id=value-fifteen]:hover + label,
 #bill-values #bill #tip-value-list .tip-select input[id=value-fifteen]:checked + label {
   background: #26c0ab;
   color: #00494d;
+  border-radius: 5px;
 }
 #bill-values #bill #tip-value-list .tip-select input[id=value-twenty-five]:hover + label,
 #bill-values #bill #tip-value-list .tip-select input[id=value-twenty-five]:checked + label {
   background: #26c0ab;
   color: #00494d;
+  border-radius: 5px;
 }
 #bill-values #bill #tip-value-list .tip-select input[id=value-fifty]:hover + label,
 #bill-values #bill #tip-value-list .tip-select input[id=value-fifty]:checked + label {
   background: #26c0ab;
   color: #00494d;
+  border-radius: 5px;
 }
 #bill-values #bill #tip-value-list .item {
   border-radius: 5px;
@@ -167,6 +174,10 @@
   color: white;
   cursor: pointer;
 }
+#bill-result #bill-reset #bill-reset-button:hover {
+  background: #26c0ab;
+  color: #00494d;
+}
 
 main {
   width: 60%;
@@ -198,6 +209,8 @@ main #bill-values#bill-result, main #bill-result#bill-result {
 #bill-values input#bill-value, #bill-values input#number-people-value {
   text-align: right;
   background: #f4fafa;
+  color: #00494d;
+  font-weight: 700;
 }
 #bill-values #bill {
   width: 100%;
@@ -265,26 +278,31 @@ main #bill-values#bill-result, main #bill-result#bill-result {
 #bill-values #bill #tip-value-list .tip-select input[id=value-five]:checked + label {
   background: #26c0ab;
   color: #00494d;
+  border-radius: 5px;
 }
 #bill-values #bill #tip-value-list .tip-select input[id=value-ten]:hover + label,
 #bill-values #bill #tip-value-list .tip-select input[id=value-ten]:checked + label {
   background: #26c0ab;
   color: #00494d;
+  border-radius: 5px;
 }
 #bill-values #bill #tip-value-list .tip-select input[id=value-fifteen]:hover + label,
 #bill-values #bill #tip-value-list .tip-select input[id=value-fifteen]:checked + label {
   background: #26c0ab;
   color: #00494d;
+  border-radius: 5px;
 }
 #bill-values #bill #tip-value-list .tip-select input[id=value-twenty-five]:hover + label,
 #bill-values #bill #tip-value-list .tip-select input[id=value-twenty-five]:checked + label {
   background: #26c0ab;
   color: #00494d;
+  border-radius: 5px;
 }
 #bill-values #bill #tip-value-list .tip-select input[id=value-fifty]:hover + label,
 #bill-values #bill #tip-value-list .tip-select input[id=value-fifty]:checked + label {
   background: #26c0ab;
   color: #00494d;
+  border-radius: 5px;
 }
 #bill-values #bill #tip-value-list .item {
   border-radius: 5px;
@@ -311,36 +329,123 @@ main #bill-values#bill-result, main #bill-result#bill-result {
   height: 100%;
 }
 
+@media screen and (min-width: 280px) and (max-width: 690px) {
+  body {
+    background: #c5e4e7;
+  }
+
+  header {
+    font-family: "Space Mono", monospace, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #c5e4e7;
+    height: 20%;
+    padding: 3em 1em;
+    letter-spacing: 10px !important;
+    color: #00494d !important;
+  }
+
+  main {
+    width: 100%;
+    padding: 40px 20px;
+    flex-direction: column;
+    border-radius: 25px 25px 0 0;
+  }
+  main h2 {
+    font-size: 1.3em !important;
+  }
+
+  #bill-values {
+    width: 100% !important;
+    margin-right: 0px !important;
+    margin-bottom: 2em;
+  }
+
+  #bill-result {
+    padding: 2em 1.5em !important;
+    height: 70% !important;
+    margin-left: 0px !important;
+    width: 100% !important;
+  }
+  #bill-result #bill-result-body {
+    margin-bottom: 20px;
+  }
+  #bill-result #bill-result-body #tip-amount {
+    margin-bottom: 20px !important;
+  }
+  #bill-result #tip-amount .result-body-title, #bill-result #total-by-person .result-body-title {
+    font-size: 1em !important;
+  }
+  #bill-result #tip-amount .result-body-title span.gray, #bill-result #total-by-person .result-body-title span.gray {
+    font-size: 0.8em !important;
+  }
+  #bill-result #tip-amount .output-container, #bill-result #total-by-person .output-container {
+    font-size: 2em !important;
+    font-weight: 700;
+  }
+  #bill-result #bill-reset {
+    height: 30% !important;
+  }
+  #bill-result #bill-reset #bill-reset-button {
+    height: 100%;
+    width: 100%;
+    background: #26c0ab;
+    padding: 0.5em 0 !important;
+    font-size: 1.5em;
+    font-weight: 700;
+    color: #00494d;
+    cursor: pointer;
+  }
+
+  footer {
+    font-family: "Space Mono", monospace, sans-serif;
+    height: 10%;
+    background: white;
+    padding: 10px 0;
+  }
+}
+@media screen and (min-width: 690px) and (max-width: 1240px) {
+  body {
+    font-family: "Space Mono", monospace, sans-serif;
+    background: #c5e4e7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  main {
+    width: 90% !important;
+    padding: 20px;
+  }
+
+  #tip-amount .result-body-title, #total-by-person .result-body-title {
+    font-size: 1em !important;
+  }
+  #tip-amount .result-body-title span.gray, #total-by-person .result-body-title span.gray {
+    font-size: 0.8em !important;
+  }
+}
+@media screen and (min-width: 1240px) {
+  body {
+    font-family: "Space Mono", monospace, sans-serif;
+    background: #c5e4e7;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body {
-  font-family: "Space Mono", monospace, sans-serif;
-  background: #c5e4e7;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  /* Hidden arrows for number inputs */
-  /* Chrome, Safari, Edge, Opera */
-  /* Firefox */
-}
-body input::-webkit-outer-spin-button,
-body input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-body input[type=number] {
-  -moz-appearance: textfield;
-}
-
 header {
-  margin-bottom: 20px;
   letter-spacing: 10px;
   color: #00494d;
 }
@@ -352,6 +457,17 @@ input {
   border: 0;
   background: #f4fafa;
   font-size: 24px;
+  /* Hidden arrows for number inputs */
+  /* Chrome, Safari, Edge, Opera */
+  /* Firefox */
+}
+input input::-webkit-outer-spin-button,
+input input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input input[type=number] {
+  -moz-appearance: textfield;
 }
 
 input:focus:hover:active:active, button:focus:hover:active {
