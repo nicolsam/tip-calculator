@@ -409,15 +409,23 @@ main #bill-values#bill-result, main #bill-result#bill-result {
   body {
     font-family: "Space Mono", monospace, sans-serif;
     background: #c5e4e7;
+    width: 100vw;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
 
+  header {
+    height: 10% !important;
+  }
+
   main {
     width: 90% !important;
     padding: 20px;
+    margin-top: 50px;
+    margin-bottom: 20px;
   }
 
   #tip-amount .result-body-title, #total-by-person .result-body-title {
@@ -438,6 +446,19 @@ main #bill-values#bill-result, main #bill-result#bill-result {
     justify-content: center;
     align-items: center;
   }
+
+  header {
+    height: 10% !important;
+    margin-bottom: 50px;
+  }
+
+  main {
+    margin-bottom: 1em;
+  }
+
+  footer {
+    height: 10%;
+  }
 }
 * {
   margin: 0;
@@ -448,6 +469,10 @@ main #bill-values#bill-result, main #bill-result#bill-result {
 header {
   letter-spacing: 10px;
   color: #00494d;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Hidden arrows for number inputs */
