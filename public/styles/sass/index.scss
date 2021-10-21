@@ -13,8 +13,13 @@
 
 header {
     letter-spacing: 10px;
-
     color: $very-dark-cyan;
+
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Hidden arrows for number inputs */
