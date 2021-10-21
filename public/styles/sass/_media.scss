@@ -107,6 +107,9 @@
     
         background: $light-grayish-cyan-primary;
     
+        width: 100vw;
+        height: 100vh;
+
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -114,9 +117,15 @@
     
     }
 
+    header {
+        height: 10% !important;
+    }
+
     main {
         width: 90% !important;
         padding: 20px;
+        margin-top: 50px;
+        margin-bottom: 20px;
     }
 
     #tip-amount, #total-by-person {
@@ -146,7 +155,20 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-    
+        
+    }
+
+    header {
+        height: 10% !important;
+        margin-bottom: 50px; 
+    }
+
+    main {
+        margin-bottom: 1em;
+    }
+
+    footer {
+        height: 10%;
     }
 }
 
