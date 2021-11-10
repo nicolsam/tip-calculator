@@ -2,85 +2,95 @@ const billValue = document.querySelector('#bill-value');
 const tipAmountOutput = document.querySelector('#tip-amount-output');
 
 const radioTip = document.getElementsByName('tip');
+const valueCustom = document.querySelector("#value-custom");
 
 const numberPeople = document.querySelector('#number-people-value');
-const byPersonOutput = document.querySelector('#by-person-output');
+const perPersonOutput = document.querySelector('#by-person-output');
 
 const billResetButton = document.querySelector('#bill-reset-button');
 
-billValue.addEventListener('keyup', () => {
+let totalBillValue;
+let tipPercentValue;
+let numberPeopleValue;
 
-    let tipValue = calculateTip(billValue.value);
-
-    tipAmountOutput.value = tipValue;
-
-})
-
-numberPeople.addEventListener('keyup', () => {
-
-    let totalByPerson = calculateTotalByPerson(numberPeople.value);
-
-    byPersonOutput.value = totalByPerson;
-})
-
-billResetButton.addEventListener('click', (e) => {
-
-    e.preventDefault();
-
-    billValue.value = 0;
-    tipAmountOutput.value = calculateTip(billValue.value);
-
-    numberPeople.value = 0;
-    byPersonOutput.value = calculateTotalByPerson(numberPeople.value);
-
-    for(let i = 0; i < radioTip.length; i++) {
-        radioTip[i].checked = false;
-    }
-
-})
+let radioTipSelected;
 
 for(let i = 0; i < radioTip.length; i++) {
 
     radioTip[i].addEventListener('change', () => {
-        let totalBill = calculateTip(billValue.value);
-        tipAmountOutput.value = totalBill;
+        let tipPercentInput = Array.from(radioTip).find(radio => radio.checked);
+        radioTipSelected = tipPercentInput;
+        tipPercentValue = parseInt(tipPercentInput.value);
+        calculateTip();
     })
 
 }
 
-function calculateTip(billValue) {
+billValue.addEventListener('input', () => {
 
-    let tipPercent;
-    let checkedTip = searchCheckedTip();
+    totalBillValue = billValue.value;
+    calculateTip();
 
-    if(checkedTip === undefined) {
-        tipPercent = 0;
+})
+
+numberPeople.addEventListener('input', () => {
+
+    numberPeopleValue = numberPeople.value;
+    calculateTip();
+
+})
+
+valueCustom.addEventListener('input', () => {
+
+    // Procurando radio selecionado
+    let radioChecked = Array.from(radioTip).find(radio => radio.checked);
+
+    // Caso não seja 'undefined' (nenhum foi selecionado)
+    if(radioChecked === undefined) {
+        console.log('LOG - Nenhum button radio foi selecionado, portanto o input "custom" está agora selecionado')
     } else {
-        tipPercent = checkedTip.value;
+        radioChecked.checked = false;
     }
 
-    let totalBill = (tipPercent / 100) * billValue; 
+    tipPercentValue = valueCustom.value;
 
-    return totalBill;
+    // Calculando novamente a gorjeta
+    calculateTip();
 
-}
+})
 
-function searchCheckedTip() {
-    let checkedTip = Array.from(radioTip).find(r => r.checked);
+billResetButton.addEventListener('click', () => {
 
-    return checkedTip;
-}
+    totalBillValue = 0;
+    tipPercentValue = 0;
+    numberPeopleValue = 0;
 
-function calculateTotalByPerson(numberPeople) {
+    radioTipSelected.checked = false;
 
-    let billByPerson = (billValue.value / numberPeople);
+    billValue.value = '';
+    numberPeople.value = '';
+    valueCustom.value = '';
 
-    if(!(isFinite(billByPerson))) {
-        billByPerson = 0;
+    tipAmountOutput.value = 0;
+    perPersonOutput.value = 0;
+
+})
+
+function calculateTip() {
+
+    totalBillValue = totalBillValue ? totalBillValue : 0;
+    tipPercentValue = tipPercentValue ? tipPercentValue : 0;
+    numberPeopleValue = numberPeopleValue ? numberPeopleValue : 0;
+
+    let tipAmount = ((tipPercentValue/100) * totalBillValue) / numberPeopleValue;
+    tipAmount = Math.floor(parseFloat(tipAmount) * 100) / 100;
+
+    if(!isNaN(tipAmount) && isFinite(tipAmount)) {
+        tipAmountOutput.value = tipAmount.toFixed(2);
+
+        let totalPerPerson = (totalBillValue/numberPeopleValue) + tipAmount;
+        perPersonOutput.value = totalPerPerson.toFixed(2);
+
     }
-
-    let totalByPerson = billByPerson;
-
-    return totalByPerson;
 
 }
