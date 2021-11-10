@@ -27,7 +27,12 @@
                 height: 100%;
     
                 background: $light-grayish-cyan;
-    
+
+                border-radius: 3px;
+                border: 2px solid transparent;
+                
+                transition: .2s;
+
                 #img-dollar {
                     display: flex;
                     justify-content: center;
@@ -37,10 +42,8 @@
                 }
     
                 #bill-value {
-    
                     width: 80%;
                     height: 100%;
-    
                 }
             }
 
@@ -61,10 +64,18 @@
             .tip-custom {
 
                 #value-custom {
+                    text-align: right;
                     width: 100%;
                     max-height: 40px;
                     font-size: 24px;
-                    font-weight: 700;   
+                    font-weight: 700;  
+                    
+                    border: 2px solid transparent;
+
+                    transition: .2s;
+                    border-radius: 3px;
+
+                    cursor: pointer;
                 }
                 
 
@@ -102,35 +113,50 @@
                     pointer-events: none;
                 }
 
-                input[id="value-five"]:hover + label, 
+                input[id="value-five"]:hover + label {
+                    background: #9AECDB;
+                    color: $very-dark-cyan;
+                }
                 input[id="value-five"]:checked + label{
                     background: $strong-cyan;
                     color: $very-dark-cyan;
                     border-radius: 5px;
                 }
                 
-                input[id="value-ten"]:hover + label, 
+                input[id="value-ten"]:hover + label {
+                    background: #9AECDB;
+                    color: $very-dark-cyan;
+                } 
                 input[id="value-ten"]:checked + label{
                     background: $strong-cyan;
                     color: $very-dark-cyan;
                     border-radius: 5px;
                 }
 
-                input[id="value-fifteen"]:hover + label, 
+                input[id="value-fifteen"]:hover + label {
+                    background: #9AECDB;
+                    color: $very-dark-cyan;
+                } 
                 input[id="value-fifteen"]:checked + label{
                     background: $strong-cyan;
                     color: $very-dark-cyan;
                     border-radius: 5px;
                 }
     
-                input[id="value-twenty-five"]:hover + label, 
+                input[id="value-twenty-five"]:hover + label {
+                    background: #9AECDB;
+                    color: $very-dark-cyan;
+                }
                 input[id="value-twenty-five"]:checked + label{
                     background: $strong-cyan;
                     color: $very-dark-cyan;
                     border-radius: 5px;
                 }
 
-                input[id="value-fifty"]:hover + label, 
+                input[id="value-fifty"]:hover + label {
+                    background: #9AECDB;
+                    color: $very-dark-cyan;
+                }
                 input[id="value-fifty"]:checked + label{
                     background: $strong-cyan;
                     color: $very-dark-cyan;
@@ -146,6 +172,20 @@
         #number-people {
 
             width: 100%;
+            
+            #input-texts {
+
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+
+                #cannot-be-zero {
+                    color: #ff7979;
+                    display: none;
+
+                    transition: .2s;
+                }
+            }
 
             #number-input-container {
 
@@ -156,6 +196,11 @@
                 height: 100%;
 
                 background: $light-grayish-cyan;
+
+                border-radius: 3px;
+                border: 2px solid transparent;
+                
+                transition: .2s;
 
                 #img-person {
                     display: flex;
